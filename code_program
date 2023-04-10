@@ -1,0 +1,13 @@
+print('сколько билетов хотите купить?')
+bilet=int(input())
+i=0
+vozrast=[]
+k_oplate=0
+while i<bilet :
+    print('введите возраст', i+1, 'участника')
+    vozrast.append(int(input()))
+    if 18 <= vozrast[i] <25 : k_oplate+=990
+    elif vozrast[i]>=25 : k_oplate+=1390
+    i+=1
+if bilet>3: k_oplate -= k_oplate*0.1
+print('к оплате', k_oplate, 'руб')
